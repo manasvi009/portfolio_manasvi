@@ -120,15 +120,35 @@ const groupedSkills = skills.reduce(
 export default function Home() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setFormData({ name: "", email: "", message: "" });
-    alert("Thank you for your message! I will get back to you soon.");
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setSubmitStatus('idle'), 5000);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -436,6 +456,18 @@ export default function Home() {
                     className="min-h-[120px] bg-background/50 border-white/10 focus:border-primary/50 resize-none"
                   />
                 </div>
+
+                {submitStatus === 'success' && (
+                  <div className="p-3 rounded-lg bg-green-500/20 text-green-600 text-sm">
+                    ✓ Message sent successfully! I'll get back to you soon.
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="p-3 rounded-lg bg-red-500/20 text-red-600 text-sm">
+                    ✗ Failed to send message. Please try again or contact me directly.
+                  </div>
+                )}
 
                 <Button
                   type="submit"

@@ -76,7 +76,8 @@
     "@vitejs/plugin-react": "5.1.2",
     "@replit/vite-plugin-runtime-error-modal": "0.0.4",
     "@replit/vite-plugin-cartographer": "0.4.4",
-    "@replit/vite-plugin-dev-banner": "0.1.1"
+    "@replit/vite-plugin-dev-banner": "0.1.1",
+    "nodemailer": "^6.9.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.13",
