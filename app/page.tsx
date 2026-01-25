@@ -224,8 +224,8 @@ export default function Home() {
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
               <img
-                src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop"
-                alt="Coding Setup"
+                src="/profile.jpg"
+                alt="Profile Picture"
                 className="relative z-10 rounded-2xl shadow-2xl border border-white/10 w-full object-cover aspect-video"
               />
             </div>
