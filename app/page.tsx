@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react"
+import Image from "next/image";
 
 import { useState } from "react";
 import {
@@ -223,9 +224,12 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
-              <img
+              <Image
                 src="/profile.jpg"
                 alt="Profile Picture"
+                width={600}
+                height={600}
+                priority
                 className="relative z-10 rounded-2xl shadow-2xl border border-white/10 w-full object-cover aspect-video"
               />
             </div>
