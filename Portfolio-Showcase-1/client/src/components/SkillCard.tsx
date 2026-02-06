@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Skill } from "@shared/schema";
 import * as Icons from "lucide-react";
-import { cn } from "@/lib/utils";
+// import { cn } from "@/lib/utils"; // Unused import
 
 // Map string icon names to Lucide components safely
 const getIcon = (iconName: string | null) => {

@@ -28,17 +28,17 @@ export async function registerRoutes(
     }
   });
 
-  app.get(api.projects.list.path, async (req, res) => {
+  app.get(api.projects.list.path, async (_req, res) => {
     const data = await storage.getProjects();
     res.json(data);
   });
 
-  app.get(api.skills.list.path, async (req, res) => {
+  app.get(api.skills.list.path, async (_req, res) => {
     const data = await storage.getSkills();
     res.json(data);
   });
 
-  app.get(api.experience.list.path, async (req, res) => {
+  app.get(api.experience.list.path, async (_req, res) => {
     const data = await storage.getExperience();
     res.json(data);
   });
