@@ -18,6 +18,7 @@ import {
   Cloud,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { createElement } from "react";
 
 interface Skill {
   id: number;
@@ -54,12 +55,12 @@ interface SkillCardProps {
 }
 
 export function SkillCard({ skill }: SkillCardProps) {
-  const Icon = getIcon(skill.icon);
+  const IconComponent = getIcon(skill.icon);
 
   return (
     <div className="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-3 text-center hover:bg-primary/5 transition-colors group cursor-default">
       <div className="p-3 rounded-full bg-secondary/50 text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-        <Icon size={24} />
+        {createElement(IconComponent, { size: 24 })}
       </div>
       <span className="font-medium text-sm md:text-base">{skill.name}</span>
     </div>

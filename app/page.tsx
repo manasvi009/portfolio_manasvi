@@ -29,82 +29,74 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const projects = [
   {
     id: 1,
-    title: "AI-Powered Code Review",
+    title: "E-Commerce Website",
     description:
-      "An intelligent code review system that uses machine learning to analyze code quality, detect bugs, and suggest improvements in real-time.",
-    techStack: ["Python", "TensorFlow", "React", "FastAPI"],
-    githubUrl: "https://github.com/manasvi009",
-    demoUrl: "#",
-    imageUrl:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    id: 2,
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce platform with real-time inventory management, payment processing, and AI-driven product recommendations.",
-    techStack: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
+      "Developed a responsive e-commerce website with user-friendly UI. Implemented product listing, cart functionality, and order flow.",
+    techStack: ["Php", "MySQL"],
     githubUrl: "https://github.com/manasvi009",
     demoUrl: "#",
     imageUrl:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    id: 3,
-    title: "Real-time Chat Application",
+    id: 2,
+    title: "Alumni Management System",
     description:
-      "A scalable chat application with end-to-end encryption, file sharing, and video calling capabilities using WebRTC.",
-    techStack: ["React", "Socket.io", "MongoDB", "WebRTC"],
+      "Designed a system to manage alumni records and communication. Enabled data management and easy retrieval of alumni information.",
+    techStack: ["MERN Stack"],
     githubUrl: "https://github.com/manasvi009",
     demoUrl: "#",
     imageUrl:
-      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    id: 3,
+    title: "AI-Powered Smart Analysis and Assistant Platform",
+    description:
+      "Developing an AI-based platform for smart data analysis and assistance. Focused on automation, insights generation, and intelligent responses.",
+    techStack: ["Python", "Fullstack", "LLM"],
+    githubUrl: "https://github.com/manasvi009",
+    demoUrl: "#",
+    imageUrl:
+      "https://images.unsplash.com/photo-1677442135722-5f11f06a1e72?q=80&w=1923&auto=format&fit=crop",
   },
 ];
 
 const skills = [
-  { id: 1, name: "React", category: "frontend", icon: "Code" },
-  { id: 2, name: "Next.js", category: "frontend", icon: "Layers" },
-  { id: 3, name: "TypeScript", category: "frontend", icon: "FileCode" },
-  { id: 4, name: "Tailwind CSS", category: "frontend", icon: "Layout" },
-  { id: 5, name: "Node.js", category: "backend", icon: "Server" },
-  { id: 6, name: "Python", category: "backend", icon: "Terminal" },
-  { id: 7, name: "PostgreSQL", category: "backend", icon: "Database" },
-  { id: 8, name: "MongoDB", category: "backend", icon: "Database" },
-  { id: 9, name: "TensorFlow", category: "ai_ml", icon: "Brain" },
-  { id: 10, name: "PyTorch", category: "ai_ml", icon: "Brain" },
-  { id: 11, name: "Scikit-learn", category: "ai_ml", icon: "Cpu" },
-  { id: 12, name: "OpenCV", category: "ai_ml", icon: "Globe" },
-  { id: 13, name: "Git", category: "tools", icon: "GitBranch" },
-  { id: 14, name: "Docker", category: "tools", icon: "Cloud" },
-  { id: 15, name: "AWS", category: "tools", icon: "Cloud" },
-  { id: 16, name: "Linux", category: "tools", icon: "Terminal" },
+  // Programming Languages
+  { id: 1, name: "PHP", category: "frontend", icon: "Code" },
+  { id: 2, name: "Python", category: "frontend", icon: "FileCode" },
+  { id: 3, name: "C++", category: "frontend", icon: "Code" },
+  { id: 4, name: "JavaScript", category: "frontend", icon: "Code" },
+  { id: 5, name: "C", category: "frontend", icon: "Code" },
+  // Web Technologies
+  { id: 6, name: "HTML", category: "backend", icon: "Code" },
+  { id: 7, name: "CSS", category: "backend", icon: "Code" },
+  { id: 8, name: "React", category: "backend", icon: "Code" },
+  // Mobile Development
+  { id: 9, name: "Android", category: "ai_ml", icon: "Code" },
+  { id: 10, name: "Flutter", category: "ai_ml", icon: "Code" },
+  // Database Management
+  { id: 11, name: "MySQL", category: "tools", icon: "Database" },
+  { id: 12, name: "MongoDB", category: "tools", icon: "Database" },
 ];
 
 const experience = [
   {
     id: 1,
-    role: "Full Stack Developer",
-    company: "Tech Solutions Inc.",
-    duration: "2022 - Present",
+    role: "Master of Science (Information Technology)",
+    company: "Uka Tarsadia University, Bardoli, Gujarat",
+    duration: "July 2025 (Pursuing)",
     description:
-      "Leading development of scalable web applications using React, Node.js, and cloud technologies. Implemented CI/CD pipelines and improved system performance by 40%.",
+      "Currently pursuing MSc in Information Technology at Uka Tarsadia University.",
   },
   {
     id: 2,
-    role: "Software Engineer",
-    company: "Innovation Labs",
-    duration: "2020 - 2022",
+    role: "Bachelor of Computer Application (BCA)",
+    company: "VNSGU, Surat, Gujarat",
+    duration: "May 2025",
     description:
-      "Developed and maintained multiple client projects. Collaborated with cross-functional teams to deliver high-quality software solutions on time.",
-  },
-  {
-    id: 3,
-    role: "Junior Developer",
-    company: "StartUp Hub",
-    duration: "2019 - 2020",
-    description:
-      "Started my journey in software development, working on frontend and backend projects. Learned agile methodologies and best practices.",
+      "Completed Bachelor of Computer Application from VNSGU, Surat, Gujarat.",
   },
 ];
 
@@ -182,7 +174,7 @@ export default function Home() {
               </h1>
 
               <div className="text-xl md:text-2xl lg:text-3xl text-muted-foreground font-mono mb-8 h-12">
-                <span>Full Stack Developer | AI/ML Engineer | UI/UX Enthusiast</span>
+                <span>MSc (IT) Student | Web Developer | Looking for Placement Opportunities</span>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -235,16 +227,15 @@ export default function Home() {
             </div>
 
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold">Passionate about building scalable solutions</h3>
+              <h3 className="text-2xl font-bold">Dedicated MSc (IT) Student with Hands-On Experience</h3>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                I am a full-stack developer with a deep interest in Artificial Intelligence and
-                Machine Learning. With over 4 years of experience in building web applications, I
-                combine creativity with technical expertise to deliver exceptional user experiences.
+                A dedicated MSc (IT) student with hands-on experience in web development and project-
+                based learning. I enjoy building practical solutions using modern technologies and
+                continuously improving my technical skills.
               </p>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                My journey began with frontend development, but my curiosity led me to explore the
-                backend and eventually the fascinating world of AI. I love solving complex problems
-                and turning ideas into reality.
+                I am looking for a placement opportunity where I can contribute effectively while
+                gaining valuable industry exposure.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-4">
